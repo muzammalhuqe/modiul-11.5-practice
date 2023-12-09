@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% comment %} card section {% endcomment %}
+
+    <div class="container mx-auto">
+        <div class="card_container" style="display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;">
+
+        {% for i in meals %}
+
+        <div class="card p-2" style="">
+            <img src="{{i.strMealThumb}}" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ i.strMeal}}</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              {% comment %} {{ i.idMeal}} {% endcomment %}
+            </div>
+        </div>
+        
+        {% endfor %}
+        </div>
+    </div>
+    
+
+
+{% endblock  %}
